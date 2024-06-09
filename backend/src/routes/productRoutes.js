@@ -1,8 +1,9 @@
 const express = require('express');
-const router = express.Router();
-const ProductController = require('../controllers/productController');
+const { listProducts, createProduct, upload } = require('../controllers/productController');
 
-router.get('/', ProductController.listProducts);
-router.post('/', ProductController.createProduct);
+const router = express.Router();
+
+router.get('/', listProducts);
+router.post('/', upload.single('image'), createProduct); // Use the upload middleware here
 
 module.exports = router;

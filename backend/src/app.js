@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 4001;
 
 const corsOptions = {
   origin: '*', // Allow all origins
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allow all methods
+  methods: '*', // Allow all methods
   allowedHeaders: '*', // Allow all headers
   credentials: true, // If you need to allow cookies or authorization headers
   optionsSuccessStatus: 204 // Some legacy browsers (IE11, various SmartTVs) choke on 204
@@ -20,6 +20,7 @@ app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 // Use product routes
+app.use('/uploads', express.static('uploads')); // Serve static files from the uploads directory
 app.use('/api/products', productRoutes);
 
 // Start the server

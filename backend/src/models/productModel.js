@@ -8,10 +8,14 @@ function getAllProducts(callback) {
 }
 
 function addProduct(product, callback) {
-  const { name, description, owner } = product;
-  const sql = 'INSERT INTO product (name, description, owner) VALUES (?,?,?)';
-  db.run(sql, [name, description, owner], function(err) {
-    callback(err, { id: this.lastID });
+  const { name, description, owner, image } = product;
+  const sql = 'INSERT INTO product (name, description, owner, image) VALUES (?, ?, ?, ?)';
+  db.run(sql, [name, description, owner, image], function(err) {
+    if (err) {
+      callback(err);
+    } else {
+      callback(null, { id: this.lastID });
+    }
   });
 }
 

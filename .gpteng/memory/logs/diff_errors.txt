@@ -1,6 +1,13 @@
 
-2024-06-08T21:11:46.942843
-
-
-2024-06-08T21:13:29.047613
-
+2024-06-09T10:16:01.849122
+In @@ -0,3 +1,4 @@
++import './ProductList.css';
+ import React from 'react';
+ 
+ function ProductList({ products }) {
+:The starting line of the diff @@ -0,3 +1,4 @@
++import './ProductList.css';
+ import React from 'react';
+ 
+ function ProductList({ products }) {
+ does not exist in the code
