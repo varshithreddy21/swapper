@@ -1,0 +1,30 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const productRoutes = require('./routes/productRoutes');
+
+const app = express();
+const PORT = process.env.PORT || 4001;
+
+const corsOptions = {
+  origin: '*', // Allow all origins
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allow all methods
+  allowedHeaders: '*', // Allow all headers
+  credentials: true, // If you need to allow cookies or authorization headers
+  optionsSuccessStatus: 204 // Some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+// Configure CORS to allow all origins and headers
+app.use(cors(corsOptions));
+
+// Use bodyParser middleware to parse JSON requests
+app.use(bodyParser.json());
+
+// Use product routes
+app.use('/api/products', productRoutes);
+
+// Start the server
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
+module.exports = app;
