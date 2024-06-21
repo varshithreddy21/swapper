@@ -24,10 +24,10 @@ function Taskbar() {
     <div className="bg-gray-800 p-4">
       <nav className="flex space-x-4">
         <AgileIcon className="mr-2"/>
-        <h1 className="text-white font-sans font-semibold text-xl mr-15">Product Swap</h1>
+        <h1 className="text-white font-sans font-semibold text-xl mr-15">SWAP-it</h1>
         <Link to="/home" className="text-white hover:text-gray-400">Home</Link>
         <Link to="/add-product" className="text-white hover:text-gray-400">Products</Link>
-        <Link to="/about" className="text-white hover:text-gray-400">About</Link>
+        {/* <Link to="/about" className="text-white hover:text-gray-400">About</Link> */}
       </nav>
     </div>
   );

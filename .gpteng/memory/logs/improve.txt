@@ -150,7 +150,7 @@ File: frontend/src/App.js
 22   return (
 23     <div className="app-container">
 24       <Taskbar />
-25       <h1>Product Swap</h1>
+25       <h1>SWAP-it</h1>
 26       <AddProduct products={products} setProducts={setProducts} />
 27       <ProductList products={products} />
 28     </div>
