@@ -7,9 +7,12 @@ import AddProduct from './components/AddProduct';
 
 function App() {
   const [products, setProducts] = useState([]);
-
+url
   useEffect(() => {
-    axios.get('http://localhost:4001/api/products')
+    const host = window.location.hostname;
+    const port = '4001'; // Change this if your port is different
+    const url = `http://${host}:${port}/api/products`;
+    axios.get(url)
       .then(response => {
         setProducts(response.data);
       })

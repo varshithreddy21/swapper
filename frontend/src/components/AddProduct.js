@@ -22,8 +22,10 @@ function AddProduct({ products, setProducts }) {
       if (image) {
         formData.append('image', image);
       }
-
-      const response = await axios.post('http://localhost:4001/api/products', formData, {
+      const host = window.location.hostname;
+      const port = '4001'; // Change this if your port is different
+      const url = `http://${host}:${port}/api/products`;
+      const response = await axios.post(url, formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
