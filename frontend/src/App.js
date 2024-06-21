@@ -7,7 +7,6 @@ import AddProduct from './components/AddProduct';
 
 function App() {
   const [products, setProducts] = useState([]);
-url
   useEffect(() => {
     const host = window.location.hostname;
     const port = '4001'; // Change this if your port is different
