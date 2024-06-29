@@ -1,0 +1,30 @@
+# Remove '#' to select a file.
+
+# gpt-engineer can only read selected files. Including irrelevant files will degrade performance, cost additional tokens and potentially overflow token limit.
+
+[files]
+# "tailwind.config.js" = "selected"
+# "server.js" = "selected"
+# "run.sh" = "selected"
+# "package.json" = "selected"
+# "postcss.config.js" = "selected"
+# "frontend/package-lock.json" = "selected"
+# "frontend/package.json" = "selected"
+"frontend/public/index.html" = "selected"
+"frontend/src/index.js" = "selected"
+"frontend/src/index.css" = "selected"
+"frontend/src/App.js" = "selected"
+"frontend/src/components/Taskbar.css" = "selected"
+"frontend/src/components/Taskbar.js" = "selected"
+"frontend/src/components/App.css" = "selected"
+"frontend/src/components/ProductList.js" = "selected"
+"frontend/src/components/AddProduct.js" = "selected"
+# "backend/db.sqlite" = "selected"
+# "backend/package-lock.json" = "selected"
+# "backend/package.json" = "selected"
+# "backend/src/app.js" = "selected"
+# "backend/src/models/db.js" = "selected"
+# "backend/src/models/productModel.js" = "selected"
+# "backend/src/controllers/productController.js" = "selected"
+# "backend/src/routes/productRoutes.js" = "selected"
+# 
